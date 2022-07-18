@@ -11,3 +11,7 @@ echo "#### pull images from docker ####"
 echo "####      make contains      ####"
 cp ./docker-compose.yml /docker/smartsmoke/docker-compose.yml
 dc up -d
+
+echo "###################################"
+echo "install smartsmoke successfully!"
+echo "###################################"
