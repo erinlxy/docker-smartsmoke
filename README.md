@@ -15,4 +15,4 @@ step3、安装应用
 
 cd ./docker-smartsmoke
 
-sudo sh auto-install.sh
+sudo sh auto_install.sh
