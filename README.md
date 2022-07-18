@@ -19,6 +19,8 @@ cd ./docker-smartsmoke
 
 sudo sh auto_install.sh
 
+dc up -d
+
 web页面 
 
 smokeping页面  http://localhost:888/   
