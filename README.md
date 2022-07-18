@@ -1,0 +1,2 @@
+# docker-smartsmoke
+使用docker一键安装smartping和smokeping
