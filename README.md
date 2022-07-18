@@ -13,6 +13,6 @@ git clone https://github.com/erinlxy/docker-smartsmoke.git
 
 step3、安装应用
 
-cd /docker-smartsmoke
+cd ./docker-smartsmoke
 
 sudo sh auto-install.sh
