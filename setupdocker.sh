@@ -34,7 +34,6 @@ echo "install docker-compose"
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 echo "display docker-compose version"
-docker-compose --version #1.24.1
 echo "display docker version"
 docker --version #20.10.17
 
