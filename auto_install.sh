@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "#### install docker & docker-compose ####"
-sudo sh setupdocker.sh  
+sh setupdocker.sh  
 
 echo "#### create a soft link from docker-compose to dc #### "
 cp ./dc.sh /docker/dc.sh
