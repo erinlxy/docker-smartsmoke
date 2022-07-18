@@ -1,0 +1,45 @@
+version:  '2.3'
+services:
+    smartping:
+      image: testfnetlink/smartsmoke:smartping
+      container_name: smartping
+      restart: always
+      volumes:
+          - "/usr/local/docker/smartping/conf:/app/conf"
+          - "/usr/local/docker/smartping/db:/app/db"
+          - "/usr/local/docker/smartping/html:/app/html"
+          - "/usr/local/docker/smartping/logs:/app/logs"
+          - "/usr/local/docker/smartping/var:/app/var"
+      ports:
+          - "8899:8899"
+      networks:
+        - smartping-net
+
+    nginx:
+      image: testfnetlink/smartsmoke:nginx
+      container_name: nginx
+      restart: always
+      ports:
+          - "80:80"
+      depends_on:
+        - smartping
+
+    smokeping:
+      image: testfnetlink/smartsmoke:smokeping
+      container_name: smokeping
+      restart: always
+      environment:
+        - TZ=Asia/Shanghai
+      volumes:
+        - "/usr/local/docker/smokeping/config:/config"
+        - "/usr/local/docker/smokeping/data:/data"
+      ports:
+        - "888:80"
+      networks:
+        - smokeping-net
+
+networks:
+  smartping-net:
+    external: false
+  smokeping-net:
+    external: false
