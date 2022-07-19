@@ -10,8 +10,8 @@ ln -sf /docker/dc.sh  /usr/bin/dc
 echo "#### pull images from docker ####"
 echo "####      make contains      ####"
 cp ./docker-compose.yml /docker/smartsmoke/docker-compose.yml
-dc up -d
+
 
 echo "###################################"
-echo "install smartsmoke successfully!"
+echo "install smartsmoke successfully!Use command 'dc up -d' to start smartsmoke. "
 echo "###################################"
